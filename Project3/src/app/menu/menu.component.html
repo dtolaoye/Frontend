@@ -1,10 +1,20 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='home'>Home</a>
-        </li>
-      <li class="nav-item">
-            <a [routerLinkActive]='activeClass' class="nav-link" routerLink='about'>About</a>
-        </li>
-    </ul>
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <ul class="navbar-nav mr-auto">
+    <h2>BetOnEverything</h2>
+    <li class="nav-item">
+      <a [routerLinkActive]="activeClass" class="nav-link" routerLink="home"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a [routerLinkActive]="activeClass" class="nav-link" routerLink="about"
+        >About</a
+      >
+    </li>
+    <li class="nav-item">
+      <a [routerLinkActive]="activeClass" class="nav-link" routerLink="you"
+        >You</a
+      >
+    </li>
+  </ul>
 </nav>
