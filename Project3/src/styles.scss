@@ -1,15 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
-.gutter{
-    max-width: 40rem;
-    margin: 2rem 1rem;
-    min-height: 30rem;
-    height: 80%;
-    margin: auto;
-    background: rgb(222,10,133);
-}
 body{
     background: rgb(6, 146, 99);
 }
+.gutter{ /* main page body */
+    max-width: 75rem;
+    height:78vh;
+    margin: 0 auto;
+    padding: 5rem;
+    overflow-y:scroll;
+    background: rgb(222,10,133);
+    clip-path: polygon(6% 0, 98% 6%, 100% 90%, 0% 100%);
+
+
+}
 .navbar{
-    background: rgb(235, 214, 95)!important;
+    background: rgb(17, 15, 1)!important;
+    height: 20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 67%, 0 100%);
+}
+.navbar-nav > h2{
+    font-family:"neoneon";
+    animation: neon 1s ease-in-out infinite alternate; 
+    color: rgb(227, 255, 230);
+    font-size:4em;
+}
+.navbar-light .navbar-nav .nav-link {    
+    animation: neon 1s ease-in-out infinite alternate; 
+    color: rgb(227, 255, 230)!important;
+    font-family:linebeam!important;
+    padding-top:1rem;
+    font-size:22px;
+}
+.gutter::-webkit-scrollbar {
+    width: 32px;               /* width of the entire scrollbar */
+  }
+  .gutter::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+  }
+  .gutter::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
+
+/*animations*/
+@keyframes neon { 
+    from { 
+        text-shadow: 0 0 15px rgb(10, 97, 100), 
+                     0 0 10px rgb(48, 140, 177), 
+                     0 0 5px rgb(0, 238, 255); 
+    } 
+}
+
+/*fonts*/
+@font-face {
+    font-family: "neoneon";
+    src: url(assets/fonts/neoneon.otf) format("opentype");
+}
+@font-face {
+font-family: "linebeam";
+src: url(assets/fonts/Linebeam.ttf) format("truetype");
 }
