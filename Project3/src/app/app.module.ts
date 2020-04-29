@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { YouComponent } from './you/you.component';
+import { PageComponent } from './page/page.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { YouComponent } from './you/you.component';
     MenuComponent,
     BetlistComponent,
     YouComponent,
+    PageComponent,
   ],
   imports: [
     BrowserModule,

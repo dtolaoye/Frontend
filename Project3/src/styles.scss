@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.gutter{
+    max-width: 40rem;
+    margin: 2rem 1rem;
+    min-height: 30rem;
+    height: 80%;
+    margin: auto;
+    background: rgb(222,10,133);
+}
+body{
+    background: rgb(6, 146, 99);
+}
+.navbar{
+    background: rgb(235, 214, 95)!important;
+}
