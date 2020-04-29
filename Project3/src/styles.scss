@@ -3,45 +3,28 @@ body{
     background: rgb(6, 146, 99);
     font-family: archivo, Arial, Helvetica, sans-serif;
 }
+.bg-dark{
+    background: rgb(44, 23, 6)!important;
+    color: rgb(227, 255, 230);
+}
 .gutter{ /* main page body */
     max-width: 75rem;
     height:78vh;
     margin: 0 auto;
     padding: 5rem;
     overflow-y:scroll;
-    background: rgb(222,10,133);
     clip-path: polygon(6% 0, 98% 6%, 100% 90%, 0% 100%);
 
 
-}
-.navbar{
-    background: rgb(17, 15, 1)!important;
-    height: 20vh;
-    clip-path: polygon(0 0, 100% 0, 100% 67%, 0 100%);
-}
-.navbar-nav > h2{
-    font-family:"neoneon";
-    animation: neon 1s ease-in-out infinite alternate; 
-    color: rgb(227, 255, 230);
-    font-size:4em;
-}
-.navbar-light .navbar-nav .nav-link {    
-    animation: neon 1s ease-in-out infinite alternate; 
-    color: rgb(227, 255, 230)!important;
-    font-family:linebeam!important;
-    padding-top:1rem;
-    font-size:22px;
 }
 .gutter::-webkit-scrollbar {
     width: 32px;               /* width of the entire scrollbar */
   }
   .gutter::-webkit-scrollbar-track {
-    background: orange;        /* color of the tracking area */
+    background: rgb(222,10,133);        /* color of the tracking area */
   }
   .gutter::-webkit-scrollbar-thumb {
-    background-color: blue;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid orange;  /* creates padding around scroll thumb */
+    background-color: rgb(90, 78, 255);    /* color of the scroll thumb */
   }
 
 /*animations*/

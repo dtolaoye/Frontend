@@ -1,0 +1,19 @@
+
+.navbar{
+    height: 20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 67%, 0 100%);
+}
+.navbar-nav > h2{
+    font-family:"neoneon";
+    animation: neon 1s ease-in-out infinite alternate; 
+    color: rgb(227, 255, 230);
+    font-size:4em;
+    padding-right:8px;
+}
+.navbar-light .navbar-nav .nav-link {    
+    animation: neon 1s ease-in-out infinite alternate; 
+    color: rgb(227, 255, 230)!important;
+    font-family:linebeam!important;
+    padding-top:1rem;
+    font-size:22px;
+}
