@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { YouComponent } from './you/you.component';
+import { LoginComponent } from './login/login.component';
+import { JoinComponent } from './join/join.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { YouComponent } from './you/you.component';
     MenuComponent,
     BetlistComponent,
     YouComponent,
+    LoginComponent,
+    JoinComponent,
   ],
   imports: [
     BrowserModule,
