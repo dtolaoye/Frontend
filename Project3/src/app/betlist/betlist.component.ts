@@ -1,26 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { formatDate, DatePipe } from '@angular/common';
 
+
 type Bet = { //probably move this into another file at some point
   bets: number;
   name: string;
   user: string;
-  cutoff: string;
+  cutoff: number;
 }
+
+const betlistData: Bet[] = [ //placeholder data delete later and replace w api call
+  {"bets": 1643, "name": "Promotion to assistant manager", "user":"futuremanager", "cutoff": 1587059474267},
+  {"bets": 2032, "name": "Baby Abigail's Eye Color", "user":"newdad110", "cutoff": 1589059414267},
+  {"bets": 22, "name": "Some random shit idk", "user": "blahblahblah", "cutoff": 9324122543}
+]
+
 @Component({
   selector: 'app-betlist',
   templateUrl: './betlist.component.html',
   styleUrls: ['./betlist.component.scss']
 })
 
-
 export class BetlistComponent implements OnInit {
-  betlist: Bet[] = [ //placeholder data delete later and replace w api callw
-    {"bets": 2032, "name": "Baby Abigail's Eye Color", "user":"newdad110", "cutoff": this.dateFormat("1987-07-16T19:20+01:00")},
-    {"bets": 1643, "name": "Promotion to assistant manager", "user":"futuremanager", "cutoff": this.dateFormat("1988-02-26T11:30+01:00")}
-  ]
+  betlist: Bet[] = betlistData;
   pipe = new DatePipe('en-US');
-  activeTab = "top-nav";
+  activeTab = "top";
 
   constructor() {
     
@@ -32,12 +36,37 @@ export class BetlistComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.betlist = betlistData;
+    this.sortBets(this.activeTab);
+  }
+
+  sortBets(tab: string):  void{
+    console.log("kill me");
+    console.log(tab);
+    // reorder elements 
+    switch (tab) {
+      case 'top':
+        this.betlist.sort(function(a: Bet, b: Bet): number {return a.bets*a.cutoff - a.bets*a.cutoff;}); //most bets, ending soonest
+        break;
+      case 'new':
+        this.betlist.sort(function(a: Bet, b: Bet): number {return b.cutoff - a.cutoff;});
+        break;
+      case 'you':
+        this.betlist.filter(function(a: Bet): boolean {return a.user === "blahblahblah"}); //replace with current user
+        break;
+      case 'results':
+        this.betlist.filter(function(a: Bet): boolean {return a.cutoff < (new Date).getTime()}).sort(function(a: Bet, b: Bet): number {return a.bets - b.bets;});
+        break;
+      default:
+        console.log("what did you do");
+    }
   }
 
   tabNav(tab: string): void { 
-    document.getElementById(this.activeTab).classList.remove("active");
-    this.activeTab = tab.concat('-nav');
-    document.getElementById(tab.concat('-nav')).classList.add('active'); //http://plnkr.co/edit/glSz1qytmdZ9BQfGbmVo?p=preview
+    document.getElementById(this.activeTab.concat('-nav')).classList.remove("active");
+    this.activeTab = tab;
+    document.getElementById(tab.concat('-nav')).classList.add('active');
+    this.sortBets(this.activeTab);
   }
 
 }
