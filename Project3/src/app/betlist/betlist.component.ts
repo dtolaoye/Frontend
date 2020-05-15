@@ -25,6 +25,7 @@ export class BetlistComponent implements OnInit {
   betlist: Bet[] = betlistData;
   pipe = new DatePipe('en-US');
   activeTab = "top";
+  public isCollapsed = false;
 
   constructor() {
     

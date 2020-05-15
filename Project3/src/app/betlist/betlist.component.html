@@ -1,6 +1,23 @@
 
-<div  > <!--https://stackoverflow.com/questions/16334722/angular-filter-and-order-elements-on-click do this later--> 
-<div class="tabs" ng-controller="tabsController">
+<div> <!--https://stackoverflow.com/questions/16334722/angular-filter-and-order-elements-on-click do this later--> 
+
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      Toggle
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        You can collapse this card by clicking Toggle
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div class="tabs" ng-controller="tabsController">
   <ul class="nav nav-tabs" id="betlist-nav">
     <li class="nav-item">
       <a class="nav-link active" id="top-nav" (click)="tabNav('top')">Top</a>
