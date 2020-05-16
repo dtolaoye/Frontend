@@ -1,0 +1,29 @@
+::ng-deep {
+    .card-header{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+.bet-count{
+    display:inline-block;
+    float:left; 
+    font-weight: bold;
+    width: 15%;
+}
+.bet-title{
+    display:inline-block;
+    width: 40%;
+}
+.bet-user{
+    display:inline-block;
+    width: 25%;
+}
+.bet-date{
+    display:inline-block;
+    width:20%;
+}

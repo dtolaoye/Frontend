@@ -11,9 +11,6 @@
     <li class="nav-item">
       <a class="nav-link" id="you-nav" (click)="tabNav('you')">You</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" id="results-nav" (click)="tabNav('results')">Top results</a>
-    </li>
   </ul>
 </div>
 
@@ -21,9 +18,10 @@
 
   <ngb-panel *ngFor="let x of betlist">
      <ng-template ngbPanelTitle>
-        <div class="bet-card">
-          {{x.bets}} {{x.name}} {{x.user}} {{x.cutoff | date}}
-        </div>
+          <span class="bet-count">{{x.bets}}</span> 
+          <span class="bet-title">{{x.name}}</span> 
+          <span class="bet-user">{{x.user}}</span> 
+          <span class="bet-date">{{x.cutoff | date}}</span>
      </ng-template>
      <ng-template ngbPanelContent>
         {{x.description}}
