@@ -22,7 +22,7 @@
   <ngb-panel *ngFor="let x of betlist">
      <ng-template ngbPanelTitle>
         <div class="bet-card">
-          {{x.bets}} {{x.name}} {{x.user}} {{x.cutoff}}
+          {{x.bets}} {{x.name}} {{x.user}} {{x.cutoff | date}}
         </div>
      </ng-template>
      <ng-template ngbPanelContent>
