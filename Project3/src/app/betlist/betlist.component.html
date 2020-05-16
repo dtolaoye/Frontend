@@ -1,22 +1,5 @@
 
 <div> <!--https://stackoverflow.com/questions/16334722/angular-filter-and-order-elements-on-click do this later--> 
-
-  <p>
-    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-      Toggle
-    </button>
-  </p>
-  <div id="collapseExample" [ngbCollapse]="isCollapsed">
-    <div class="card">
-      <div class="card-body">
-        You can collapse this card by clicking Toggle
-      </div>
-    </div>
-  </div>
-  
-  
-
   <div class="tabs" ng-controller="tabsController">
   <ul class="nav nav-tabs" id="betlist-nav">
     <li class="nav-item">
@@ -34,22 +17,15 @@
   </ul>
 </div>
 
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Bets</th>
-        <th scope="col">Title</th>
-        <th scope="col">User</th>
-        <th scope="col">Cutoff</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let x of betlist">
-            <td>{{ x.bets }}</td>
-            <td>{{ x.name }}</td>
-            <td>{{ x.user }}</td>
-            <td>{{ x.cutoff | date }}</td>
-        </tr>
-    </tbody>
-  </table>
+<ngb-accordion [destroyOnHide]='false' [closeOthers]="true" activeIds="panel1">
+
+  <ngb-panel *ngFor="let x of betlist">
+     <ng-template ngbPanelTitle>
+        <span> {{x.name}} </span>
+     </ng-template>
+     <ng-template ngbPanelContent>
+        Donut caramels sweet roll bonbo
+     </ng-template>
+  </ngb-panel>
+</ngb-accordion>
 </div>

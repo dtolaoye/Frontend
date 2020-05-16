@@ -26,9 +26,7 @@ export class BetlistComponent implements OnInit {
   pipe = new DatePipe('en-US');
   activeTab = "top";
   public isCollapsed = false;
-
   constructor() {
-    
   }
 
   dateFormat(myDate: string): string{
