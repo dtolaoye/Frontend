@@ -21,10 +21,12 @@
 
   <ngb-panel *ngFor="let x of betlist">
      <ng-template ngbPanelTitle>
-        <span> {{x.name}} </span>
+        <div class="bet-card">
+          {{x.bets}} {{x.name}} {{x.user}} {{x.cutoff}}
+        </div>
      </ng-template>
      <ng-template ngbPanelContent>
-        Donut caramels sweet roll bonbo
+        {{x.description}}
      </ng-template>
   </ngb-panel>
 </ngb-accordion>
