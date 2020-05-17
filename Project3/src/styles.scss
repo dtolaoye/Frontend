@@ -2,3 +2,54 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    background: rgb(6, 146, 99);
+    font-family: archivo, Arial, Helvetica, sans-serif;
+}
+.bg-dark{
+    background: rgb(32, 23, 15)!important;
+    color: rgb(227, 255, 230);
+}
+.gutter{ /* main page body */
+    max-width: 75rem;
+    height:78vh;
+    margin: 0 auto;
+    padding: 5rem;
+    overflow-y:scroll;
+    clip-path: polygon(6% 0, 98% 6%, 100% 90%, 0% 100%);
+
+
+}
+.gutter::-webkit-scrollbar {
+    width: 32px;               /* width of the entire scrollbar */
+  }
+  .gutter::-webkit-scrollbar-track {
+    background: rgb(222,10,133);        /* color of the tracking area */
+  }
+  .gutter::-webkit-scrollbar-thumb {
+    background-color: rgb(90, 78, 255);    /* color of the scroll thumb */
+  }
+
+/*animations*/
+@keyframes neon { 
+    from { 
+        text-shadow: 0 0 15px rgb(10, 97, 100), 
+                     0 0 10px rgb(48, 140, 177), 
+                     0 0 5px rgb(0, 238, 255); 
+    } 
+}
+
+/*fonts*/
+@font-face {
+    font-family: "neoneon";
+    src: url(assets/fonts/neoneon.otf) format("opentype");
+}
+@font-face {
+font-family: "linebeam";
+src: url(assets/fonts/Linebeam.ttf) format("truetype");
+}
+@font-face {
+    font-family: "archivo";
+    src: url(assets/fonts/Archivo-Medium.ttf) format("truetype");
+    }

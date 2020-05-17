@@ -8,17 +8,34 @@
         margin: 0;
         padding: 0;
     }
+    .card{
+        background-color: rgb(61, 43, 43);
+    }
 }
+
+.nav-link, .nav-tabs .nav-item.show .nav-link {
+    background-color: rgb(61, 43, 43);
+    color:#dee2e6;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    border-color: transparent;
+    font-family: "linebeam";
+}
+  
 .bet-count{
     display:inline-block;
     float:left; 
     font-weight: bold;
     width: 15%;
+    background-color: rgb(182, 13, 159);
+    color: rgb(61, 43, 43);
+    border-radius: 1rem;
 }
+
 .bet-title{
     display:inline-block;
     width: 40%;
 }
+
 .bet-user{
     display:inline-block;
     width: 25%;

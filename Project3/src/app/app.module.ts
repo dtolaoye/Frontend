@@ -11,6 +11,7 @@ import { YouComponent } from './you/you.component';
 import { LoginComponent } from './login/login.component';
 import { JoinComponent } from './join/join.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageComponent } from './page/page.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     YouComponent,
     LoginComponent,
     JoinComponent,
+    PageComponent,
   ],
   imports: [
     BrowserModule,
