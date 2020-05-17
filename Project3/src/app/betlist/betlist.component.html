@@ -1,1 +1,30 @@
-<p>betlist works!</p>
+
+<div> <!--https://stackoverflow.com/questions/16334722/angular-filter-and-order-elements-on-click do this later--> 
+  <div class="tabs" ng-controller="tabsController">
+    <ul class="nav nav-tabs" id="betlist-nav">
+      <li class="nav-item">
+        <a class="nav-link active" id="top-nav" (click)="tabNav('top')">Top</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="new-nav" (click)="tabNav('new')">New</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="you-nav" (click)="tabNav('you')">You</a>
+      </li>
+    </ul>
+  </div>  
+
+  <ngb-accordion [destroyOnHide]='false' [closeOthers]="true" activeIds="panel1">
+    <ngb-panel *ngFor="let x of betlist">
+      <ng-template ngbPanelTitle>
+            <span class="bet-count">{{x.bets}}</span> 
+            <span class="bet-title">{{x.name}}</span> 
+            <span class="bet-user">{{x.user}}</span> 
+            <span class="bet-date">{{x.cutoff | date}}</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+          {{x.description}}
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>

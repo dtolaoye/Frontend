@@ -10,6 +10,7 @@ import { BetlistComponent } from './betlist/betlist.component';
 import { YouComponent } from './you/you.component';
 import { LoginComponent } from './login/login.component';
 import { JoinComponent } from './join/join.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { JoinComponent } from './join/join.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
