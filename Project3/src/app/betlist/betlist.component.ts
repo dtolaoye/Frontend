@@ -42,19 +42,16 @@ export class BetlistComponent implements OnInit {
 
   sortBets(tab: string):  void{
     // reorder elements 
+    this.betlist = betlistData; //update betlists 
     switch (tab) {
       case 'top':
-        console.log("why");
-        this.betlist.sort(function(a: Bet, b: Bet): number {return b.bets - a.bets;}); //most bets, ending soonest
+        this.betlist.sort(function(a: Bet, b: Bet): number {return b.bets - a.bets;}); 
         break;
       case 'new':
         this.betlist.sort(function(a: Bet, b: Bet): number {return b.cutoff - a.cutoff;});
         break;
       case 'you':
-        this.betlist.filter(function(a: Bet): boolean {return a.user === "blahblahblah"}); //replace with current user
-        break;
-      case 'results':
-        this.betlist.filter(function(a: Bet): boolean {return a.cutoff < (new Date).getTime()}).sort(function(a: Bet, b: Bet): number {return a.bets - b.bets;});
+        this.betlist = this.betlist.filter(function(a: Bet): boolean {return a.user === "blahblahblah"}); //replace with current user
         break;
       default:
         console.log("what did you do");
