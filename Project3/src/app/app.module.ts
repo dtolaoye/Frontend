@@ -10,6 +10,7 @@ import { BetlistComponent } from './betlist/betlist.component';
 import { YouComponent } from './you/you.component';
 import { LoginComponent } from './login/login.component';
 import { JoinComponent } from './join/join.component';
+import { PersonalComponent } from './personal/personal.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { JoinComponent } from './join/join.component';
     YouComponent,
     LoginComponent,
     JoinComponent,
+    PersonalComponent,
   ],
   imports: [
     BrowserModule,
