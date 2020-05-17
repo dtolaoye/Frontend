@@ -1,32 +1,21 @@
-<div class="container register">
-  <div class="row">
-      <div class="col-md-3 register-left">
-          <img src="assets/perspective-dice-six-faces-six.png" alt="">
-          <h3>Welcome back!</h3>
-          <p>Ready to test your luck?</p>
-      </div>
-      <div class="col-md-9 register-right">
-          <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <h3 class="register-heading">Sign In</h3>
-                  <div class="wrapper">
-                    <div class="row register-form">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <input type="text" class="form-control"  placeholder="Username *" value="" />
-                          </div>
-                          <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Password *" value="" />
-                          </div>
-                          <div>No account? <a routerLink="/join">Sign up here!</a></div>
-                          <input type="submit" class="btnRegister" value="Login"/>
-                      </div>
 
-                  </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="tab-pane wrapper" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <span id="die"><img src="assets/perspective-dice-six-faces-six.png" alt="">    </span>
+            <div id="welcome">
+                <h2 class="glitch" data-text="Welcome back...">Welcome back...</h2>
+                <h2 class="glow">Welcome back...</h2>
+            </div>
+      <div class="row register-form">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="text" class="form-control"  placeholder="Username *" value="" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Password *" value="" />
+            </div>
+            <div>No account? <a routerLink="/join">Sign up here!</a></div>
+            <input type="submit" class="btnRegister" value="Login"/>
+        </div>
 
+    </div>
 </div>
