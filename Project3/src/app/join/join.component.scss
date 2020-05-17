@@ -20,17 +20,19 @@
     margin-bottom: 3%;
     cursor: pointer;
 }
-.register-right{
-    background: #f8f9fa;
-    border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;
+div #welcome{
+    display:inline-block;
+    width:80%;
 }
-.register-left img{
-    margin-top: 15%;
-    margin-bottom: 5%;
-    width: 25%;
+#money img {
+    width: 2.4rem;
+}
+#money img{
+    display: inline-block;
+    width: 5rem;
     -webkit-animation: mover 2s infinite  alternate;
     animation: mover 1s infinite  alternate;
+    margin: 1rem;
 }
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
