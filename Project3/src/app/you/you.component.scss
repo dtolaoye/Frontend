@@ -1,56 +1,24 @@
-
-.sidebar{
-  background-color: gray; 
-  width : 20%;
-  height: 800px;
-  float: left;
+.wrapper{
+  font-size: 25px;
 }
 
-.table {
-  width: 50%;
-  margin-left: 300px;
+.name{
+  margin-left: 1.5em
 }
 
-.subrow tr:hover {
-  background-color: #F2F3F8;
+.user{
+  margin-left: 1.5em
 }
 
-.card{
-  border-radius: 0px;
-  width: 237px;
-  height: 147px;
-  margin-top: 2%;
-  text-align: right;
-}
-
-.revenue{
-  float: left;
-  margin-left: 3%;
-  margin-right: 1%;
-}
-
-.wins{
- float: left;
- margin-right: 1%;
-}
-
-.losses{
-  float: left;
-  margin-right: 1%;
-}
-
-.ranking{
-  float: left;
-  margin-right: 1%;
+.email{
+  margin-left: 3.5em
 
 }
 
-.table{
-	margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 35%;
-  left: 23%;
-  width: 62rem;
-  
+.birthday{
+  margin-left: 2.5em
+}
+
+.address{
+  margin-left: 2.5em
 }
