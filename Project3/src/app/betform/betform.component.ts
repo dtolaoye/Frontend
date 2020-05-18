@@ -15,7 +15,7 @@ export class BetformComponent implements OnInit {
     let wager = $("#wager").val();
     let options = $("#options").val();
     let optionsArr = options.split(','); 
-    alert(optionsArr);
+    alert("Bet Title: " + title + " " + "Wager Placed: $" + wager + " " + "Options: " + optionsArr);
   }
 
   ngOnInit(): void {
