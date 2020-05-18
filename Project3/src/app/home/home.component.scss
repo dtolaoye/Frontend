@@ -1,0 +1,16 @@
+#welcome-card{
+    padding: 1rem;
+    margin: 0 .8rem .8rem .8rem;
+    position:relative;
+}
+.close-icon{
+    float:right;
+    position:absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-family: neoneon;
+}
+.close-icon img {
+    width:1rem;
+}

@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  close(): void {
+    document.getElementById("welcome-card").remove();
+  }
+
 }

@@ -1,16 +1,21 @@
 <form>
-  <h2>Create a Bet</h2>
+  <h2 class="glitch" data-text="Create a bet">Create a bet</h2>
+  <h2 class="glow">Create a bet</h2>
     <div class="form-group">
-      <label for="exampleInputPassword1">What is this bet about?</label>
-      <input type="text" class="form-control" id="bettitle" placeholder="Please enter a name for this bet">
+      <label for="inputBetTitle">What is this bet about?</label>
+      <input type="text" class="form-control" id="bettitle" placeholder="Please enter a title for this bet">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">What are the choices?</label>
-      <input type="test" class="form-control" id="options" placeholder="Please seperate the choices with commas">
+      <label for="inputBetOutcomes">What are the outcomes?</label>
+      <input type="test" class="form-control" id="options" placeholder="Please separate your outcomes with commas">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">How much are you wagering?</label>
-      <input type="number" class="form-control" id="wager" placeholder="Please enter a dollar amount">
+      <label for="inputOutcomeChanges">Give us some odds</label>
+      <input type="number" class="form-control" id="wager" placeholder="Enter the odds for each outcome, separated with commas">
     </div>
-    <button type="submit" class="btn btn-primary" id="submit" (click)="getFormData()">Create Bet</button>
+    <div class="form-group">
+      <label for="inputCutoff">When will the results be in?</label>
+      <input class="form-control" placeholder="dd-mm-yyyy" name="dp" formControlName="due_date" navigation="arrows" ngbDatepicker #d="ngbDatepicker">
+    </div>
+    <button type="submit" class="btnRegister cool-gradient" id="submit" (click)="getFormData()">Create Bet</button>
   </form>

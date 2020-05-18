@@ -6,6 +6,13 @@
 body{
     background: rgb(6, 146, 99);
     font-family: archivo, Arial, Helvetica, sans-serif;
+    background: linear-gradient(348deg, #069263, #44bba7, #e3d0e6);
+    background-size: 600% 600%;
+    animation: gradientflow 2s ease infinite;
+}
+h2{
+    font-family: "miami";
+    font-size: 3rem;
 }
 .bg-dark{
     background: rgb(32, 23, 15)!important;
@@ -15,11 +22,24 @@ body{
     max-width: 75rem;
     height:78vh;
     margin: 0 auto;
-    padding: 5rem;
+    padding: 4.4rem;
     overflow-y:scroll;
     clip-path: polygon(6% 0, 98% 6%, 100% 90%, 0% 100%);
-
-
+}
+.btnRegister{
+  float: right;
+  margin-top: 1.4rem;
+  border: none;
+  clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
+  padding: 2%;color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+}
+.cool-gradient{
+  background: rgb(233,55,225);
+  background: linear-gradient(90deg, rgba(233,55,225,1) 19%, rgba(0,123,255,1) 69%, rgba(0,255,211,1) 100%);
+  
 }
 .gutter::-webkit-scrollbar {
     width: 32px;               /* width of the entire scrollbar */
@@ -40,6 +60,90 @@ body{
     } 
 }
 
+@keyframes gradientflow {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.glitch {
+    color: rgb(223, 191, 191);
+    position: relative;
+    animation: glitch 5s 5s infinite;
+  }
+  
+  .glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: -5px 0 magenta;
+    background: rgb(32, 23, 15);
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  }
+  
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -5px 0 lightgreen;
+    background: rgb(32, 23, 15);
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  }
+  
+  @keyframes glitch {
+    1%{
+      transform: rotateX(10deg) skewX(90deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+  
+  @keyframes noise-1 {
+    $steps: 30;
+    @for $i from 1 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+      }
+    }
+  }
+  
+  @keyframes noise-2 {
+    $steps: 30;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+      }
+    }
+  }
+  
+  @keyframes fudge {
+    from {
+      transform: translate(0px, 0px);
+    }
+    to {
+      transform: translate(0px, 2%);
+    }
+  }
+  
+  .glow {
+    @extend .glitch;
+    text-shadow: 0 0 1000px rgb(223, 191, 191);
+    color: transparent;
+    position: absolute;
+    top: 0;
+  }
+  
+  
+
 /*fonts*/
 @font-face {
     font-family: "neoneon";
@@ -53,3 +157,7 @@ src: url(assets/fonts/Linebeam.ttf) format("truetype");
     font-family: "archivo";
     src: url(assets/fonts/Archivo-Medium.ttf) format("truetype");
     }
+@font-face {
+    font-family: "miami";
+    src: url(assets/fonts/Miami.ttf) format("truetype");
+}

@@ -17,7 +17,7 @@
   <ngb-accordion [destroyOnHide]='false' [closeOthers]="true" activeIds="panel1">
     <ngb-panel *ngFor="let x of betlist">
       <ng-template ngbPanelTitle>
-            <span class="bet-count">{{x.bets}}</span> 
+            <span class="bet-count cool-gradient">{{x.bets}}</span> 
             <span class="bet-title">{{x.name}}</span> 
             <span class="bet-user">{{x.user}}</span> 
             <span class="bet-date">{{x.cutoff | date}}</span>
