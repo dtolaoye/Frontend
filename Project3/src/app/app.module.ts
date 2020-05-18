@@ -11,6 +11,7 @@ import { YouComponent } from './you/you.component';
 import { LoginComponent } from './login/login.component';
 import { JoinComponent } from './join/join.component';
 import { PersonalComponent } from './personal/personal.component';
+import { BetformComponent } from './betform/betform.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PersonalComponent } from './personal/personal.component';
     LoginComponent,
     JoinComponent,
     PersonalComponent,
+    BetformComponent,
   ],
   imports: [
     BrowserModule,
