@@ -11,9 +11,10 @@ type Bet = { //probably move this into another file at some point
 }
 
 const betlistData: Bet[] = [ //placeholder data delete later and replace w api call 
-  {"bets": 1643, "name": "Promotion to assistant manager", "user":"futuremanager", "cutoff": 9324122543, "description": "eoihdfkghsldijgrldkfjblgserg"},
-  {"bets": 2032, "name": "Baby Abigail's Eye Color", "user":"newdad110", "cutoff": 1589059414267, "description": "eoihdfkghsldijgrldkfjblgserg"},
-  {"bets": 22, "name": "Some random shit idk", "user": "blahblahblah", "cutoff": 1587059474267, "description": "eoihdfkghsldijgrldkfjblgserg"}
+  {"bets": 1643, "name": "Promotion to assistant manager", "user":"futuremanager", "cutoff": 9324122543, "description": "Will I get the promotion today?"},
+  {"bets": 2032, "name": "Baby Abigail's Eye Color", "user":"newdad110", "cutoff": 1589059414267, "description": "What Color will Abigail's eye color be"},
+  {"bets": 22, "name": "Will the Colts lose?", "user": "GoBirds29", "cutoff": 1587059474267, "description": "They're playing the Eagles today"},
+  {"bets": 340, "name": "Tootsie Pop", "user": "popLad", "cutoff": 1587059474267, "description": "How many licks does it take to get to the center of a tootsie pop"}
 ]
 
 @Component({
