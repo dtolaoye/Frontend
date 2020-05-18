@@ -15,8 +15,12 @@
                     <input type="text" class="form-control" placeholder="Password *" value="" />
                 </div>
                 <div>No account? <a routerLink="/join">Sign up here!</a></div>
-                <input type="submit" class="btnRegister cool-gradient" value="Login"/>
-            </form>
+                <div class="form-group">
+                    <button [disabled]="loading" class="btn btnRegister cool-gradient">
+                        Login
+                    </button>
+                </div>
+                        </form>
         </div>
     </div>
 </div>
