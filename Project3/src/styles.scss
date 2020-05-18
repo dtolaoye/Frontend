@@ -6,6 +6,9 @@
 body{
     background: rgb(6, 146, 99);
     font-family: archivo, Arial, Helvetica, sans-serif;
+    background: linear-gradient(348deg, #069263, #44bba7, #e3d0e6);
+    background-size: 600% 600%;
+    animation: gradientflow 2s ease infinite;
 }
 h2{
     font-family: "miami";
@@ -22,8 +25,21 @@ h2{
     padding: 4.4rem;
     overflow-y:scroll;
     clip-path: polygon(6% 0, 98% 6%, 100% 90%, 0% 100%);
-
-
+}
+.btnRegister{
+  float: right;
+  margin-top: 10%;
+  border: none;
+  clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
+  padding: 2%;color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+}
+.cool-gradient{
+  background: rgb(233,55,225);
+  background: linear-gradient(90deg, rgba(233,55,225,1) 19%, rgba(0,123,255,1) 69%, rgba(0,255,211,1) 100%);
+  
 }
 .gutter::-webkit-scrollbar {
     width: 32px;               /* width of the entire scrollbar */
@@ -44,6 +60,11 @@ h2{
     } 
 }
 
+@keyframes gradientflow {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
 .glitch {
     color: rgb(223, 191, 191);

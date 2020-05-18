@@ -10,7 +10,6 @@
 }
 .register-left input{
     border: none;
-    border-radius: 1.5rem;
     padding: 2%;
     width: 60%;
     background: #f8f9fa;
@@ -19,17 +18,15 @@
     margin-top: 30%;
     margin-bottom: 3%;
     cursor: pointer;
+    
 }
 div #welcome{
     display:inline-block;
     width:80%;
 }
-#money img {
-    width: 2.4rem;
-}
 #money img{
     display: inline-block;
-    width: 5rem;
+    width: 3.8rem;
     -webkit-animation: mover 2s infinite  alternate;
     animation: mover 1s infinite  alternate;
     margin: 1rem;
@@ -50,18 +47,6 @@ div #welcome{
 .register .register-form{
     padding: 10%;
     margin-top: 10%;
-}
-.btnRegister{
-    float: right;
-    margin-top: 10%;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    background: #0062cc;
-    color: #fff;
-    font-weight: 600;
-    width: 50%;
-    cursor: pointer;
 }
 .register .nav-tabs{
     margin-top: 3%;
