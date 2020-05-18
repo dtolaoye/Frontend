@@ -20,7 +20,16 @@
     border-color: transparent;
     font-family: "linebeam";
 }
-  
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+    border: none;
+    color:rgb(6, 146, 99);
+}
+
+.nav-tabs{
+    border: none;
+}
+
 .bet-count{
     display:inline-block;
     float:left; 
