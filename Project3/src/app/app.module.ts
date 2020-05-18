@@ -13,6 +13,7 @@ import { JoinComponent } from './join/join.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageComponent } from './page/page.component';
 import { PersonalComponent } from './personal/personal.component';
+import { BetformComponent } from './betform/betform.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PersonalComponent } from './personal/personal.component';
     JoinComponent,
     PageComponent,
     PersonalComponent,
+    BetformComponent,
   ],
   imports: [
     BrowserModule,

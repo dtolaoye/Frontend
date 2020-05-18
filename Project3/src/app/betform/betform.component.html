@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Bet Title</label>
+      <input type="text" class="form-control" id="bettitle" placeholder="Please enter what this bet is about">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">How much are you wagering?</label>
+      <input type="number" class="form-control" id="wager" placeholder="Please enter a dollar amount">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">What are the options?</label>
+        <input type="test" class="form-control" id="options" placeholder="Please seperate the options with commas">
+      </div>
+    <button type="submit" class="btn btn-primary" id="submit" (click)="getFormData()">Create Bet</button>
+  </form>
